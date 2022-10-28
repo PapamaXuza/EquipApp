@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3F708C58-8295-4035-A21C-95215D1AE67B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ONT_2000_Project</RootNamespace>
+    <AssemblyName>ONT 2000 Project</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BLL">
+      <HintPath>..\BLL\bin\Debug\BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="DAL">
+      <HintPath>..\BLL\bin\Debug\DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmAdminLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminLogin.Designer.cs">
+      <DependentUpon>frmAdminLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgentLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgentLogin.Designer.cs">
+      <DependentUpon>frmAgentLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReports.Designer.cs">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStart.Designer.cs">
+      <DependentUpon>frmStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTenantLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTenantLogin.Designer.cs">
+      <DependentUpon>frmTenantLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUcAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUcAdmin.Designer.cs">
+      <DependentUpon>frmUcAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUcAgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUcAgent.Designer.cs">
+      <DependentUpon>frmUcAgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUcTenant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUcTenant.Designer.cs">
+      <DependentUpon>frmUcTenant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Property.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Property.Designer.cs">
+      <DependentUpon>Property.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserAdmin.Designer.cs">
+      <DependentUpon>UserAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserAgency.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserAgency.Designer.cs">
+      <DependentUpon>UserAgency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserAgent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserAgent.Designer.cs">
+      <DependentUpon>UserAgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserCity.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserCity.Designer.cs">
+      <DependentUpon>UserCity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserGetPropertyByNameReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserGetPropertyByNameReport.Designer.cs">
+      <DependentUpon>UserGetPropertyByNameReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserLocationOpt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserLocationOpt.Designer.cs">
+      <DependentUpon>UserLocationOpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserLocationReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserLocationReport.Designer.cs">
+      <DependentUpon>UserLocationReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserMainReports.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserMainReports.Designer.cs">
+      <DependentUpon>UserMainReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserProperty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserProperty.Designer.cs">
+      <DependentUpon>UserProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPropertyAgent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserPropertyAgent.Designer.cs">
+      <DependentUpon>UserPropertyAgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPropertyType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserPropertyType.Designer.cs">
+      <DependentUpon>UserPropertyType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserProvince.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserProvince.Designer.cs">
+      <DependentUpon>UserProvince.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserRental.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserRental.Designer.cs">
+      <DependentUpon>UserRental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserRentalAndAgent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserRentalAndAgent.Designer.cs">
+      <DependentUpon>UserRentalAndAgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserRentalByPrice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserRentalByPrice.Designer.cs">
+      <DependentUpon>UserRentalByPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserReports.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserReports.Designer.cs">
+      <DependentUpon>UserReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserReportsByName.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserReportsByName.Designer.cs">
+      <DependentUpon>UserReportsByName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserSuburb.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserSuburb.Designer.cs">
+      <DependentUpon>UserSuburb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserTenant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserTenant.Designer.cs">
+      <DependentUpon>UserTenant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserWelcome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserWelcome.Designer.cs">
+      <DependentUpon>UserWelcome.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmAdminLogin.resx">
+      <DependentUpon>frmAdminLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgentLogin.resx">
+      <DependentUpon>frmAgentLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReports.resx">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStart.resx">
+      <DependentUpon>frmStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTenantLogin.resx">
+      <DependentUpon>frmTenantLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUcAdmin.resx">
+      <DependentUpon>frmUcAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUcAgent.resx">
+      <DependentUpon>frmUcAgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUcTenant.resx">
+      <DependentUpon>frmUcTenant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Property.resx">
+      <DependentUpon>Property.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAdmin.resx">
+      <DependentUpon>UserAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAgency.resx">
+      <DependentUpon>UserAgency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAgent.resx">
+      <DependentUpon>UserAgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserCity.resx">
+      <DependentUpon>UserCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserGetPropertyByNameReport.resx">
+      <DependentUpon>UserGetPropertyByNameReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserLocationOpt.resx">
+      <DependentUpon>UserLocationOpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserLocationReport.resx">
+      <DependentUpon>UserLocationReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserMainReports.resx">
+      <DependentUpon>UserMainReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserProperty.resx">
+      <DependentUpon>UserProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPropertyAgent.resx">
+      <DependentUpon>UserPropertyAgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPropertyType.resx">
+      <DependentUpon>UserPropertyType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserProvince.resx">
+      <DependentUpon>UserProvince.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserRental.resx">
+      <DependentUpon>UserRental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserRentalAndAgent.resx">
+      <DependentUpon>UserRentalAndAgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserRentalByPrice.resx">
+      <DependentUpon>UserRentalByPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserReports.resx">
+      <DependentUpon>UserReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserReportsByName.resx">
+      <DependentUpon>UserReportsByName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserSuburb.resx">
+      <DependentUpon>UserSuburb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserTenant.resx">
+      <DependentUpon>UserTenant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserWelcome.resx">
+      <DependentUpon>UserWelcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
